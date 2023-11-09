@@ -1,0 +1,165 @@
+This system is used to find budget food for the users. It shows the location and list of menus depending on the price range
+
+
+    DECLARE Input/Output Stream
+    DECLARE using namespace std
+
+    FUNCTION main ():
+
+    ARRAY highFood [] // list of the high budget food
+    ARRAY lowFood [] // list of the low budget food
+
+    DECLARE STRING name
+    DECLARE INT budget
+
+    OUTPUT "What is your name? "
+    INPUT name
+
+    OUTPUT "Welcome to BudgEAT, " + name
+
+DO:
+    
+    OUTPUT "Input your budget: "
+    INPUT budget
+
+    IF (cin.fail()):
+        
+        OUTPUT "Invalid input. Please enter a number."
+        cin.clear()             //Clear the error state of the input stream
+        cin.ignore(100, '\n')  //Ignore the next 100 characters or up to a newline character, whichever comes first
+
+
+
+    IF budget <= 0 || budget >= 200 THEN:
+        OUTPUT "Sorry, food in that price range isn't listed"
+
+    ELSE IF budget >= 100 THEN:
+
+        DECLARE choice
+
+        OUTPUT "Here are the list of food options: "
+        OUTPUT high budget food
+
+        OUTPUT "Enter your choice (1, 2, or 3): "
+        INPUT choice
+
+        IF (choice == 1 || choice == 2 || choice == 3):
+            OUTPUT "You chose " + choice of the user
+            OUTPUT "Location: "
+
+            IF (choice = 1):
+
+                OUTPUT "Beside Ateneo JHS"
+                OUTPUT "Menu: "
+
+                    OUTPUT the food menu #1
+
+            ELSE IF (choice = 2):
+
+                OUTPUT "Matina Town Square"
+                OUTPUT "Menu: "
+
+                    OUTPUT the food menu #2
+
+            ELSE IF (choice = 3)
+
+                OUTPUT "Food Hall"
+                OUTPUT "Menu: "
+
+                    OUTPUT the food menu #3
+
+            ELSE:
+
+                OUTPUT "Invalid choice. Please choose 1, 2, or 3."
+
+    ELSE:
+
+        DECLARE choice
+
+        OUTPUT "Here are the list of food options: "
+        OUTPUT low budget food
+
+        OUTPUT "Enter your choice (1-10): "
+        INPUT choice
+
+        IF (choice == 1 || choice == 2 || choice == 3 || choice == 4 || choice == 5 || choice == 6 || choice == 7 || choice == 8 || choice == 9 || choice == 10):
+
+            OUTPUT "You chose: " + food choice of the user
+            OUTPUT "Location: "
+
+            IF (choice == 1) THEN:
+
+                OUTPUT "Behind MMCM Academic building"
+                OUTPUT "Menu: "
+
+                    OUTPUT food menu #1
+
+            ELSE IF (choice == 2) THEN:
+
+                OUTPUT "Davao City, Door 2, Daylight Inn Bldg"
+                OUTPUT "Menu: "
+
+                    OUTPUT the food menu #2
+
+            ELSE IF (choice == 3) THEN:
+
+                OUTPUT "Behind MMCM Academic building"
+                OUTPUT "Menu: "
+
+                    OUTPUT the food menu #3
+
+            ELSE IF (choice == 4) THEN:
+
+                OUTPUT "MMCM Cafeteria/Food Hall"
+                OUTPUT "Menu: "
+
+                    OUTPUT the food menu #4
+
+            ELSE IF (choice == 5) THEN:
+
+                OUTPUT "141 CAMIA ST. JUNA SUBDIVISION MATINA"
+                OUTPUT "Menu: "
+
+                    OUTPUT the food menu #5
+
+            ELSE IF (choice == 6) THEN:
+
+                OUTPUT "Behind MMCM Academic building"
+                OUTPUT "Menu: "
+
+                    OUTPUT the food menu #6
+
+            ELSE IF (choice == 7) THEN:
+
+                OUTPUT "Behind Shell Gas Station"
+                OUTPUT "Menu: "
+
+                    OUTPUT the food menu #7
+
+            ELSE IF (choice == 8) THEN:
+
+                OUTPUT "In front of MMCM, Shell Gas Station"
+                OUTPUT "Menu: "
+
+                    OUTPUT the food menu #8
+
+            ELSE IF (choice == 9) THEN:
+
+                OUTPUT "Behind MMCM Academic building"
+                OUTPUT "Menu: "
+
+                    OUTPUT the food menu #9
+
+            ELSE IF (choice == 10) THEN:
+
+                OUTPUT "Across the highway, in front of MMCM Campus"
+                OUTPUT "Menu: "
+
+                    OUTPUT the food menu #10
+
+            ELSE:
+                OUTPUT "Invalid choice. Please input a valid number"
+
+WHILE (budget <= 0 || budget >=200) 
+
+END
